@@ -2,10 +2,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+
 /**
  * @author TODO: please add student ID and name here
  * Try to write some comments for your codes (methods, 15 points)
  */
+//	B0544131
 public class HW2 {
 
 	public static void main(String[] args) {
@@ -26,8 +28,8 @@ public class HW2 {
 	}
 	/**
 	 * This method is used for checking your result, not a part of your HW2
-	 * @param allCards 所有的牌
-	 * @param nDeck 總共有幾副牌
+	 * @param allCards �������
+	 * @param nDeck 蝮賢��嗾����
 	 * @return
 	 */
 	private static boolean isAllCardsCorrect(ArrayList<Card> allCards,int nDeck){
@@ -77,12 +79,26 @@ class Deck{
 		//Card card=new Card(1,1); ->means new card as clubs ace
 		//cards.add(card);
 		//Sample code end
+		for(int k=1;k<=nDeck;k++){
+			
+			for(int i=1;i<5;i++){
+			
+				for(int j=1;j<14;j++){
+				Card card=new Card(i,j);
+				cards.add(card);
+				
+				}
+			}
+		}
 
 	}	
 	//TODO: Please implement the method to print all cards on screen (10 points)
 	public void printDeck(){
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
+		for(int i=0;i<cards.size();i++){
+			cards.get(i).printCard();
+		}
 
 	}
 	public ArrayList<Card> getAllCards(){
@@ -106,6 +122,29 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
+if(rank==1){
+			
+			if(suit==1)
+				System.out.println("Clubs"+","+"Ace");
+			if(suit==2)
+				System.out.println("Diamonds"+","+"Ace");
+			if(suit==3)
+				System.out.println("Hearts"+","+"Ace");
+			if(suit==4)
+			System.out.println("Spades"+","+"Ace");
+		}
+		else{
+			
+			if(suit==1)
+				System.out.println("Clubs"+","+rank);
+			if(suit==2)
+				System.out.println("Diamonds"+","+rank);
+			if(suit==3)
+				System.out.println("Hearts"+","+rank);
+			if(suit==4)
+			System.out.println("Spades"+","+rank);
+			
+		}
 
 	}
 	public int getSuit(){
